@@ -123,6 +123,7 @@ flowchart TD
 ### 🔄 How the Interrupt-Resume Cycle Works
 
 <img src="assets/interrupt_resume.svg" width="100%" alt="Interrupt Resume Cycle"/>
+
 ---
 
 ## 🚀 Setup

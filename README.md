@@ -91,34 +91,10 @@ Uses `gpt-4o-mini` via the GitHub Models inference endpoint — just a free GitH
 </div>
 
 ---
-
 ## 🏗️ Architecture
-```mermaid
-flowchart TD
-    A([▶ START]) --> B
-    B["📥 topic_loader — Fetches topic via Wikipedia API"] --> C
-    C["🧭 strategy_selector — Picks strategy via STRATEGY_PRIORITY matrix"] --> D
-    D["💡 explainer — Explains with targeted teaching strategy"] --> E
-    E["❓ question_generator — Generates adaptive question, no answer leakage"] --> F
-    F{{"⏸ INTERRUPT — interrupt_before=response_evaluator"}}
-    F -- "student submits answer" --> G
-    G["🔍 response_evaluator — Scores answer, detects misconception type"] --> H
-    H{"🚦 decision_gate — confidence ≥ 0.8 OR attempts ≥ 3?"}
-    H -- "✅ Yes — done" --> I
-    H -- "❌ No — retry" --> C
-    I["🏆 mastery_recorder — Writes to concept_mastery SQLite table"] --> J([⏹ END])
 
-    style A fill:#2d1b69,stroke:#7c3aed,color:#fff
-    style J fill:#2d1b69,stroke:#7c3aed,color:#fff
-    style F fill:#92400e,stroke:#f59e0b,color:#fef3c7
-    style H fill:#1e3a5f,stroke:#3b82f6,color:#dbeafe
-    style B fill:#1e1b4b,stroke:#6366f1,color:#e0e7ff
-    style C fill:#1e1b4b,stroke:#6366f1,color:#e0e7ff
-    style D fill:#064e3b,stroke:#10b981,color:#d1fae5
-    style E fill:#064e3b,stroke:#10b981,color:#d1fae5
-    style G fill:#78350f,stroke:#f59e0b,color:#fef3c7
-    style I fill:#14532d,stroke:#22c55e,color:#dcfce7
-```
+<img src="assets/architecture.svg" width="100%" alt="EduTutor AI Architecture"/>
+
 ---
 ### 🔄 How the Interrupt-Resume Cycle Works
 

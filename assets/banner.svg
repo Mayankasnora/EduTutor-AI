@@ -1,10 +1,8 @@
 <svg width="100%" viewBox="0 0 880 240" role="img" xmlns="http://www.w3.org/2000/svg">
 <title>EduTutor AI — Adaptive AI Tutoring System</title>
-<desc>Animated banner with typing effect, wave animation, floating math symbols, binary digits, and particle constellation</desc>
 <defs>
   <style>
     @keyframes blink  { 0%,100%{opacity:1} 50%{opacity:0} }
-    @keyframes fadein { from{opacity:0} to{opacity:1} }
     @keyframes dr0 { 0%,100%{transform:translate(0,0)}   50%{transform:translate(5px,-4px)}  }
     @keyframes dr1 { 0%,100%{transform:translate(0,0)}   50%{transform:translate(-6px,3px)}  }
     @keyframes dr2 { 0%,100%{transform:translate(0,0)}   50%{transform:translate(4px,5px)}   }
@@ -20,19 +18,18 @@
     @keyframes dash { to{stroke-dashoffset:-16} }
     @keyframes rg   { 0%,100%{opacity:.04} 50%{opacity:.09} }
     @keyframes w1 {
-      0%,100% { d:path("M0,138 Q110,118 220,135 Q330,152 440,132 Q550,112 660,130 Q770,148 880,128 L880,240 L0,240 Z") }
-      50%     { d:path("M0,130 Q110,150 220,126 Q330,106 440,138 Q550,156 660,122 Q770,106 880,135 L880,240 L0,240 Z") }
+      0%,100% { d:path("M0,158 Q110,138 220,155 Q330,172 440,152 Q550,132 660,150 Q770,168 880,148 L880,240 L0,240 Z") }
+      50%     { d:path("M0,150 Q110,170 220,146 Q330,126 440,158 Q550,176 660,142 Q770,126 880,155 L880,240 L0,240 Z") }
     }
     @keyframes w2 {
-      0%,100% { d:path("M0,152 Q110,134 220,150 Q330,166 440,148 Q550,130 660,148 Q770,164 880,146 L880,240 L0,240 Z") }
-      50%     { d:path("M0,146 Q110,164 220,142 Q330,122 440,154 Q550,170 660,138 Q770,124 880,152 L880,240 L0,240 Z") }
+      0%,100% { d:path("M0,170 Q110,152 220,168 Q330,184 440,166 Q550,148 660,166 Q770,182 880,164 L880,240 L0,240 Z") }
+      50%     { d:path("M0,164 Q110,182 220,160 Q330,140 440,172 Q550,188 660,156 Q770,142 880,170 L880,240 L0,240 Z") }
     }
     @keyframes w3 {
-      0%,100% { d:path("M0,164 Q110,148 220,163 Q330,178 440,161 Q550,145 660,162 Q770,178 880,160 L880,240 L0,240 Z") }
-      50%     { d:path("M0,158 Q110,174 220,155 Q330,138 440,167 Q550,182 660,153 Q770,140 880,164 L880,240 L0,240 Z") }
+      0%,100% { d:path("M0,182 Q110,166 220,181 Q330,196 440,179 Q550,163 660,180 Q770,196 880,178 L880,240 L0,240 Z") }
+      50%     { d:path("M0,176 Q110,192 220,173 Q330,156 440,185 Q550,200 660,171 Q770,158 880,182 L880,240 L0,240 Z") }
     }
   </style>
-
   <linearGradient id="wg1" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0%" stop-color="rgba(99,102,241,0.14)"/>
     <stop offset="100%" stop-color="rgba(99,102,241,0)"/>
@@ -55,12 +52,10 @@
     <stop offset="0%"   stop-color="rgba(99,102,241,0.07)"/>
     <stop offset="100%" stop-color="rgba(99,102,241,0)"/>
   </radialGradient>
-
-  <!-- typing clip: grows from 0 to 246px (full width of "EduTutor AI" at 44px Segoe UI 800) -->
   <clipPath id="clip-title">
     <rect x="296" y="65" height="52" width="0">
       <animate attributeName="width"
-        values="0;0;0;20;40;60;80;100;120;140;160;180;200;220;240;246;246;246"
+        values="0;0;0;20;40;60;80;100;120;140;160;180;200;220;240;253;253;253"
         keyTimes="0;0.04;0.1;0.18;0.26;0.34;0.42;0.49;0.55;0.61;0.67;0.73;0.79;0.85;0.91;0.95;0.98;1"
         dur="2.2s" fill="freeze"/>
     </rect>
@@ -87,17 +82,16 @@
 </g>
 
 <!-- concentric circles -->
-<circle cx="440" cy="100" r="40"  fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite"/>
-<circle cx="440" cy="100" r="78"  fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite .5s"/>
-<circle cx="440" cy="100" r="116" fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite 1s"/>
-<circle cx="440" cy="100" r="154" fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite 1.5s"/>
+<circle cx="440" cy="96" r="40"  fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite"/>
+<circle cx="440" cy="96" r="78"  fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite .5s"/>
+<circle cx="440" cy="96" r="116" fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite 1s"/>
+<circle cx="440" cy="96" r="154" fill="none" stroke="rgba(99,102,241,1)" stroke-width=".6" style="animation:rg 3s ease-in-out infinite 1.5s"/>
 
 <!-- floating math left -->
 <text x="22"  y="30"  font-family="'Courier New',monospace" font-size="13" style="animation:dr0 6s ease-in-out infinite,glo 3s ease-in-out infinite" fill="#f9c74f">∑ᵢ xᵢ</text>
 <text x="15"  y="72"  font-family="'Courier New',monospace" font-size="11" style="animation:dr1 7s ease-in-out infinite,glo2 4s ease-in-out infinite" fill="#f9c74f">∂/∂x</text>
 <text x="22"  y="112" font-family="'Courier New',monospace" font-size="12" style="animation:dr2 8s ease-in-out infinite,glo 3.5s ease-in-out infinite" fill="#f9c74f">∫₀^∞</text>
 <text x="14"  y="148" font-family="'Courier New',monospace" font-size="10" style="animation:dr3 5s ease-in-out infinite,glo2 5s ease-in-out infinite" fill="#818cf8">λx.x</text>
-<text x="20"  y="185" font-family="'Courier New',monospace" font-size="10" style="animation:dr4 9s ease-in-out infinite,glo 4s ease-in-out infinite" fill="#818cf8">O(n²)</text>
 <text x="115" y="22"  font-family="'Courier New',monospace" font-size="9"  style="animation:dr1 6s ease-in-out infinite .5s,glo2 3s ease-in-out infinite" fill="#f9c74f">BFS</text>
 <text x="115" y="95"  font-family="'Courier New',monospace" font-size="9"  style="animation:dr0 8s ease-in-out infinite 1s,glo 4s ease-in-out infinite" fill="#818cf8">mod p</text>
 
@@ -106,22 +100,17 @@
 <text x="812" y="70"  font-family="'Courier New',monospace" font-size="11" style="animation:dr0 6s ease-in-out infinite .3s,glo2 4s ease-in-out infinite" fill="#f9c74f">∈ ℝ</text>
 <text x="798" y="112" font-family="'Courier New',monospace" font-size="12" style="animation:dr3 8s ease-in-out infinite,glo 5s ease-in-out infinite" fill="#f9c74f">P=NP?</text>
 <text x="814" y="152" font-family="'Courier New',monospace" font-size="10" style="animation:dr2 5s ease-in-out infinite .7s,glo2 3s ease-in-out infinite" fill="#818cf8">⊕ XOR</text>
-<text x="800" y="188" font-family="'Courier New',monospace" font-size="10" style="animation:dr4 7s ease-in-out infinite,glo 4s ease-in-out infinite" fill="#818cf8">Θ(n²)</text>
 <text x="745" y="22"  font-family="'Courier New',monospace" font-size="9"  style="animation:dr0 6s ease-in-out infinite .2s,glo2 3s ease-in-out infinite" fill="#f9c74f">DFS</text>
 <text x="740" y="95"  font-family="'Courier New',monospace" font-size="9"  style="animation:dr1 9s ease-in-out infinite .8s,glo 4s ease-in-out infinite" fill="#818cf8">gcd(a,b)</text>
 
 <!-- binary rain left -->
 <text x="8"  y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall0 4s linear infinite">1</text>
 <text x="22" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall1 5.5s linear infinite 1.2s">0</text>
-<text x="8"  y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall2 6s linear infinite 3s">1</text>
-<text x="22" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall0 4.5s linear infinite 2.1s">0</text>
 <text x="36" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall1 5s linear infinite .7s">1</text>
 
 <!-- binary rain right -->
 <text x="845" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall1 4.2s linear infinite .4s">0</text>
 <text x="858" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall0 5.8s linear infinite 1.8s">1</text>
-<text x="845" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall2 4.8s linear infinite 3.2s">0</text>
-<text x="858" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall1 6.2s linear infinite .9s">1</text>
 <text x="832" y="0" font-family="'Courier New',monospace" font-size="9" fill="#6366f1" style="animation:fall0 5.2s linear infinite 2.5s">0</text>
 
 <!-- particle constellation left -->
@@ -142,70 +131,82 @@
 <line x1="790" y1="76"  x2="790" y2="114" stroke="#6366f1" stroke-width=".5" stroke-dasharray="4 3" style="animation:dash 1.9s linear infinite" fill="none"/>
 <line x1="790" y1="114" x2="790" y2="152" stroke="#6366f1" stroke-width=".5" stroke-dasharray="4 3" style="animation:dash 2.6s linear infinite" fill="none"/>
 
-<!-- wave 1 indigo -->
+<!-- wave 1 -->
 <path fill="url(#wg1)" style="animation:w1 5s ease-in-out infinite"
-  d="M0,138 Q110,118 220,135 Q330,152 440,132 Q550,112 660,130 Q770,148 880,128 L880,240 L0,240 Z"/>
+  d="M0,158 Q110,138 220,155 Q330,172 440,152 Q550,132 660,150 Q770,168 880,148 L880,240 L0,240 Z"/>
 <path fill="none" stroke="rgba(99,102,241,0.45)" stroke-width=".9" style="animation:w1 5s ease-in-out infinite"
-  d="M0,138 Q110,118 220,135 Q330,152 440,132 Q550,112 660,130 Q770,148 880,128"/>
+  d="M0,158 Q110,138 220,155 Q330,172 440,152 Q550,132 660,150 Q770,168 880,148"/>
 
-<!-- wave 2 violet -->
+<!-- wave 2 -->
 <path fill="url(#wg2)" style="animation:w2 6s ease-in-out infinite"
-  d="M0,152 Q110,134 220,150 Q330,166 440,148 Q550,130 660,148 Q770,164 880,146 L880,240 L0,240 Z"/>
+  d="M0,170 Q110,152 220,168 Q330,184 440,166 Q550,148 660,166 Q770,182 880,164 L880,240 L0,240 Z"/>
 <path fill="none" stroke="rgba(129,140,248,0.35)" stroke-width=".9" style="animation:w2 6s ease-in-out infinite"
-  d="M0,152 Q110,134 220,150 Q330,166 440,148 Q550,130 660,148 Q770,164 880,146"/>
+  d="M0,170 Q110,152 220,168 Q330,184 440,166 Q550,148 660,166 Q770,182 880,164"/>
 
-<!-- wave 3 gold -->
+<!-- wave 3 -->
 <path fill="url(#wg3)" style="animation:w3 7s ease-in-out infinite"
-  d="M0,164 Q110,148 220,163 Q330,178 440,161 Q550,145 660,162 Q770,178 880,160 L880,240 L0,240 Z"/>
+  d="M0,182 Q110,166 220,181 Q330,196 440,179 Q550,163 660,180 Q770,196 880,178 L880,240 L0,240 Z"/>
 <path fill="none" stroke="rgba(249,199,79,0.3)" stroke-width=".9" style="animation:w3 7s ease-in-out infinite"
-  d="M0,164 Q110,148 220,163 Q330,178 440,161 Q550,145 660,162 Q770,178 880,160"/>
+  d="M0,182 Q110,166 220,181 Q330,196 440,179 Q550,163 660,180 Q770,196 880,178"/>
 
 <!-- center glow -->
 <rect width="880" height="240" fill="url(#cg)"/>
 
 <!-- ∑ symbol -->
-<text x="258" y="108" font-family="'Courier New',monospace" font-size="34" font-weight="700" fill="#f9c74f" opacity="0">
+<text x="258" y="104" font-family="'Courier New',monospace" font-size="34" font-weight="700" fill="#f9c74f" opacity="0">
   ∑
   <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.08;0.14;1" dur="2.2s" fill="freeze"/>
 </text>
 
-<!-- full title rendered once, revealed by growing clipPath -->
-<text clip-path="url(#clip-title)" x="296" y="108"
+<!-- full title with typing clipPath -->
+<text clip-path="url(#clip-title)" x="296" y="104"
       font-family="'Segoe UI',system-ui,Arial,sans-serif"
       font-size="44" font-weight="800" letter-spacing="-1" fill="white">EduTutor <tspan fill="#818cf8">AI</tspan></text>
 
 <!-- blinking cursor -->
-<rect x="549" y="70" width="3" height="40" fill="#818cf8">
+<rect x="551" y="66" width="3" height="40" fill="#818cf8">
   <animate attributeName="opacity"
     values="0;0;1;0;1;0;1;0;1;0;0;0"
     keyTimes="0;0.08;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;0.95;1"
     dur="2.4s" fill="freeze"/>
 </rect>
 
-<!-- tagline -->
-<text x="440" y="130" text-anchor="middle"
+<!-- tagline — centered at x=440 -->
+<text x="440" y="124" text-anchor="middle"
       font-family="'Courier New',monospace" font-size="11" letter-spacing="3"
       fill="rgba(129,140,248,0.75)" opacity="0">
   // learn · compute · master
   <animate attributeName="opacity" values="0;0;0;1" keyTimes="0;0.8;0.88;1" dur="2.8s" fill="freeze"/>
 </text>
 
-<!-- divider -->
-<line x1="310" y1="142" x2="570" y2="142" stroke="url(#dg)" stroke-width=".8" opacity="0">
+<!-- divider — centered: from 310 to 570, midpoint=440 -->
+<line x1="310" y1="136" x2="570" y2="136" stroke="url(#dg)" stroke-width=".8" opacity="0">
   <animate attributeName="opacity" values="0;0;0;0.8" keyTimes="0;0.84;0.9;1" dur="3.1s" fill="freeze"/>
 </line>
 
-<!-- pills -->
-<g opacity="0" font-family="'Courier New',monospace" font-size="9.5" letter-spacing=".5">
+<!-- pills — 5 pills, total width = 4*80+4*8 = 352, start x = 440-176 = 264 -->
+<g opacity="0" font-family="'Courier New',monospace" font-size="9" letter-spacing=".5">
   <animate attributeName="opacity" values="0;0;0;1" keyTimes="0;0.88;0.94;1" dur="3.4s" fill="freeze"/>
-  <rect x="213" y="152" width="80" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
-  <text x="253" y="164" text-anchor="middle" fill="rgba(129,140,248,.8)">LangGraph</text>
-  <rect x="303" y="152" width="70" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
-  <text x="338" y="164" text-anchor="middle" fill="rgba(129,140,248,.8)">Streamlit</text>
-  <rect x="383" y="152" width="84" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
-  <text x="425" y="164" text-anchor="middle" fill="rgba(129,140,248,.8)">GPT-4o-mini</text>
-  <rect x="477" y="152" width="76" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
-  <text x="515" y="164" text-anchor="middle" fill="rgba(129,140,248,.8)">Adaptive AI</text>
+
+  <!-- pill 1: LangGraph, w=82, x=264 -->
+  <rect x="264" y="148" width="82" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
+  <text x="305" y="160" text-anchor="middle" fill="rgba(129,140,248,.85)">LangGraph</text>
+
+  <!-- pill 2: Streamlit, w=70, x=354 -->
+  <rect x="354" y="148" width="70" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
+  <text x="389" y="160" text-anchor="middle" fill="rgba(129,140,248,.85)">Streamlit</text>
+
+  <!-- pill 3: GPT-4o-mini, w=86, x=432 — center pill -->
+  <rect x="432" y="148" width="86" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
+  <text x="475" y="160" text-anchor="middle" fill="rgba(129,140,248,.85)">GPT-4o-mini</text>
+
+  <!-- pill 4: SQLite, w=60, x=526 -->
+  <rect x="526" y="148" width="60" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
+  <text x="556" y="160" text-anchor="middle" fill="rgba(129,140,248,.85)">SQLite</text>
+
+  <!-- pill 5: Wikipedia, w=74, x=594 -->
+  <rect x="594" y="148" width="74" height="18" rx="3" fill="none" stroke="rgba(129,140,248,.3)" stroke-width=".8"/>
+  <text x="631" y="160" text-anchor="middle" fill="rgba(129,140,248,.85)">Wikipedia</text>
 </g>
 
 </svg>

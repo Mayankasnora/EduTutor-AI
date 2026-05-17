@@ -1,0 +1,253 @@
+<svg width="100%" viewBox="0 0 720 900" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>EduTutor AI — LangGraph Architecture</title>
+<desc>Animated architecture diagram showing the full LangGraph agent flow</desc>
+<defs>
+  <style>
+    @keyframes fadeUp { 0%{opacity:0;transform:translateY(10px)} 100%{opacity:1;transform:translateY(0)} }
+    @keyframes dash   { to{stroke-dashoffset:-18} }
+    @keyframes pulse  { 0%,100%{opacity:.2;r:14} 50%{opacity:.6;r:18} }
+    @keyframes glow   { 0%,100%{opacity:.25} 50%{opacity:.8} }
+
+    .n0 { animation: fadeUp .5s 0.1s both }
+    .n1 { animation: fadeUp .5s 0.4s both }
+    .n2 { animation: fadeUp .5s 0.7s both }
+    .n3 { animation: fadeUp .5s 1.0s both }
+    .n4 { animation: fadeUp .5s 1.3s both }
+    .n5 { animation: fadeUp .5s 1.6s both }
+    .n6 { animation: fadeUp .5s 1.9s both }
+    .n7 { animation: fadeUp .5s 2.2s both }
+    .e0 { animation: fadeUp .4s 0.55s both }
+    .e1 { animation: fadeUp .4s 0.85s both }
+    .e2 { animation: fadeUp .4s 1.15s both }
+    .e3 { animation: fadeUp .4s 1.45s both }
+    .e4 { animation: fadeUp .4s 1.75s both }
+    .e5 { animation: fadeUp .4s 2.05s both }
+    .e6 { animation: fadeUp .4s 2.35s both }
+    .e7 { animation: fadeUp .4s 2.55s both }
+
+    .flow  { stroke-dasharray:6 4; animation:dash 1.4s linear infinite; fill:none }
+    .flow2 { stroke-dasharray:4 6; animation:dash 1.8s linear infinite reverse; fill:none }
+    .pr    { animation: pulse 2s ease-in-out infinite }
+    .gl    { animation: glow  2s ease-in-out infinite }
+  </style>
+  <marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
+  </marker>
+  <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+  </marker>
+  <marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+  </marker>
+  <marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/>
+  </marker>
+  <marker id="a5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
+  </marker>
+  <filter id="gf" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="6" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<!-- background -->
+<rect width="720" height="900" fill="#0d1117" rx="12"/>
+
+<!-- subtle grid -->
+<g stroke="rgba(30,41,80,0.35)" stroke-width=".4">
+  <line x1="0"   y1="50"  x2="720" y2="50"/>
+  <line x1="0"   y1="150" x2="720" y2="150"/>
+  <line x1="0"   y1="250" x2="720" y2="250"/>
+  <line x1="0"   y1="350" x2="720" y2="350"/>
+  <line x1="0"   y1="450" x2="720" y2="450"/>
+  <line x1="0"   y1="550" x2="720" y2="550"/>
+  <line x1="0"   y1="650" x2="720" y2="650"/>
+  <line x1="0"   y1="750" x2="720" y2="750"/>
+  <line x1="0"   y1="850" x2="720" y2="850"/>
+  <line x1="120" y1="0"   x2="120" y2="900"/>
+  <line x1="240" y1="0"   x2="240" y2="900"/>
+  <line x1="360" y1="0"   x2="360" y2="900"/>
+  <line x1="480" y1="0"   x2="480" y2="900"/>
+  <line x1="600" y1="0"   x2="600" y2="900"/>
+</g>
+
+<!-- title -->
+<text x="360" y="36" text-anchor="middle"
+      font-family="'Segoe UI',system-ui,sans-serif" font-size="12"
+      font-weight="600" fill="#7c3aed" letter-spacing="2" opacity=".9">
+  LANGGRAPH ARCHITECTURE
+</text>
+
+<!-- ══ NODE 0: START ══ -->
+<g class="n0">
+  <ellipse cx="360" cy="80" rx="70" ry="24" fill="#2d1b69" stroke="#7c3aed" stroke-width="1.4"/>
+  <!-- glow behind -->
+  <ellipse cx="360" cy="80" rx="70" ry="24" fill="rgba(124,58,237,0.15)" class="gl" filter="url(#gf)"/>
+  <text x="360" y="85" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="13" font-weight="700" fill="#c4b5fd">▶  START</text>
+</g>
+
+<!-- edge 0 -->
+<g class="e0">
+  <line x1="360" y1="104" x2="360" y2="136"
+        class="flow" stroke="#6366f1" stroke-width="1.4" marker-end="url(#a1)"/>
+</g>
+
+<!-- ══ NODE 1: topic_loader ══ -->
+<g class="n1">
+  <rect x="160" y="140" width="400" height="56" rx="8"
+        fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="360" y="162" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="13" font-weight="700" fill="#a5b4fc">📥  topic_loader</text>
+  <text x="360" y="180" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="10" fill="#6366f1">Fetches Wikipedia content for the concept</text>
+</g>
+
+<!-- edge 1 -->
+<g class="e1">
+  <line x1="360" y1="196" x2="360" y2="228"
+        class="flow" stroke="#6366f1" stroke-width="1.4" marker-end="url(#a1)"/>
+</g>
+
+<!-- ══ NODE 2: strategy_selector ══ -->
+<g class="n2">
+  <rect x="160" y="232" width="400" height="56" rx="8"
+        fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="360" y="254" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="13" font-weight="700" fill="#a5b4fc">🧭  strategy_selector</text>
+  <text x="360" y="272" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="10" fill="#6366f1">Picks teaching strategy via STRATEGY_PRIORITY</text>
+</g>
+
+<!-- edge 2 -->
+<g class="e2">
+  <line x1="360" y1="288" x2="360" y2="320"
+        class="flow" stroke="#10b981" stroke-width="1.4" marker-end="url(#a2)"/>
+</g>
+
+<!-- ══ NODE 3: explainer ══ -->
+<g class="n3">
+  <rect x="160" y="324" width="400" height="56" rx="8"
+        fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+  <text x="360" y="346" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="13" font-weight="700" fill="#6ee7b7">💡  explainer</text>
+  <text x="360" y="364" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="10" fill="#34d399">Explains concept with the selected teaching strategy</text>
+</g>
+
+<!-- edge 3 -->
+<g class="e3">
+  <line x1="360" y1="380" x2="360" y2="412"
+        class="flow" stroke="#10b981" stroke-width="1.4" marker-end="url(#a2)"/>
+</g>
+
+<!-- ══ NODE 4: question_generator ══ -->
+<g class="n4">
+  <rect x="160" y="416" width="400" height="56" rx="8"
+        fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+  <text x="360" y="438" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="13" font-weight="700" fill="#6ee7b7">❓  question_generator</text>
+  <text x="360" y="456" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="10" fill="#34d399">Generates adaptive question · no answer leakage</text>
+</g>
+
+<!-- edge 4: to interrupt -->
+<g class="e4">
+  <line x1="360" y1="472" x2="360" y2="500"
+        class="flow" stroke="#f59e0b" stroke-width="1.4" marker-end="url(#a3)"/>
+</g>
+
+<!-- ══ NODE 5: INTERRUPT (hexagon feel via wide rounded rect + pulse ring) ══ -->
+<g class="n5">
+  <!-- pulse ring -->
+  <rect x="148" y="502" width="424" height="52" rx="12"
+        fill="none" stroke="#f59e0b" stroke-width="1.8" class="pr"/>
+  <!-- main box -->
+  <rect x="156" y="504" width="408" height="48" rx="10"
+        fill="#92400e" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="360" y="524" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="13" font-weight="700" fill="#fde68a">⏸  INTERRUPT</text>
+  <text x="360" y="542" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="10" fill="#fbbf24">interrupt_before=["response_evaluator"]  ·  checkpoint saved</text>
+</g>
+
+<!-- edge 5: student submits -->
+<g class="e5">
+  <text x="428" y="580" font-family="'Segoe UI',sans-serif"
+        font-size="9.5" fill="#f59e0b" opacity=".85" font-style="italic">student submits answer</text>
+  <line x1="360" y1="552" x2="360" y2="592"
+        class="flow" stroke="#f59e0b" stroke-width="1.4" marker-end="url(#a3)"/>
+</g>
+
+<!-- ══ NODE 6: response_evaluator ══ -->
+<g class="n6">
+  <rect x="160" y="596" width="400" height="56" rx="8"
+        fill="#78350f" stroke="#f59e0b" stroke-width="1"/>
+  <text x="360" y="618" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="13" font-weight="700" fill="#fde68a">🔍  response_evaluator</text>
+  <text x="360" y="636" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="10" fill="#fbbf24">Scores answer · detects misconception type · confidence 0–1</text>
+</g>
+
+<!-- edge 6: to decision_gate -->
+<g class="e6">
+  <line x1="360" y1="652" x2="360" y2="682"
+        class="flow" stroke="#3b82f6" stroke-width="1.4" marker-end="url(#a1)"/>
+</g>
+
+<!-- ══ NODE 7: decision_gate (diamond) ══ -->
+<g class="n7">
+  <polygon points="360,690 510,750 360,810 210,750"
+           fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="360" y="742" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="11" font-weight="700" fill="#93c5fd">🚦  decision_gate</text>
+  <text x="360" y="758" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="9.5" fill="#60a5fa">confidence ≥ 0.8 OR attempts ≥ 3?</text>
+</g>
+
+<!-- ══ RETRY arrow: right side of diamond → back up to strategy_selector ══ -->
+<g class="e7">
+  <!-- label -->
+  <text x="628" y="620" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="9.5" fill="#ef4444">❌ retry</text>
+  <text x="628" y="634" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="9.5" fill="#ef4444">new strategy</text>
+  <!-- path from right of diamond → right gutter → up to strategy_selector right edge -->
+  <path d="M510 750 Q630 750 630 660 Q630 260 560 260"
+        fill="none" stroke="#ef4444" stroke-width="1.2"
+        stroke-dasharray="5 3" marker-end="url(#a4)"/>
+
+  <!-- ✅ done: from bottom of diamond down to mastery_recorder -->
+  <text x="238" y="832" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="9.5" fill="#22c55e">✅ Yes — done</text>
+  <line x1="360" y1="810" x2="360" y2="840"
+        class="flow" stroke="#22c55e" stroke-width="1.4" marker-end="url(#a5)"/>
+
+  <!-- mastery_recorder box -->
+  <rect x="160" y="844" width="400" height="38" rx="8"
+        fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="360" y="858" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="11" font-weight="700" fill="#86efac">🏆  mastery_recorder</text>
+  <text x="360" y="873" text-anchor="middle" font-family="'Segoe UI',sans-serif"
+        font-size="9.5" fill="#4ade80">Writes to concept_mastery SQLite table · updates leaderboard</text>
+</g>
+
+<!-- ══ legend ══ -->
+<g font-family="'Segoe UI',sans-serif" font-size="9" opacity=".7"
+   style="animation:fadeUp .5s 2.8s both">
+  <rect x="22" y="864" width="9" height="9" rx="2" fill="#1e1b4b" stroke="#6366f1" stroke-width=".8"/>
+  <text x="35" y="873" fill="#6366f1">Agent node</text>
+  <rect x="110" y="864" width="9" height="9" rx="2" fill="#064e3b" stroke="#10b981" stroke-width=".8"/>
+  <text x="123" y="873" fill="#10b981">Teach</text>
+  <rect x="165" y="864" width="9" height="9" rx="2" fill="#92400e" stroke="#f59e0b" stroke-width=".8"/>
+  <text x="178" y="873" fill="#f59e0b">Interrupt</text>
+  <rect x="235" y="864" width="9" height="9" rx="2" fill="#78350f" stroke="#f59e0b" stroke-width=".8"/>
+  <text x="248" y="873" fill="#fbbf24">Evaluate</text>
+  <rect x="305" y="864" width="9" height="9" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width=".8"/>
+  <text x="318" y="873" fill="#60a5fa">Decision</text>
+  <rect x="372" y="864" width="9" height="9" rx="2" fill="#14532d" stroke="#22c55e" stroke-width=".8"/>
+  <text x="385" y="873" fill="#4ade80">Done</text>
+</g>
+
+</svg>
